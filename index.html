@@ -11,9 +11,9 @@
 		<p id="estado"></p>
 		<p id="resultado"></p>
 		<script>
-			document.getElementById("estado").innerHTML = "Lanzado el script";
+			document.getElementById("progreso").innerHTML = "Lanzado el script";
 			var xhr = new XMLHttpRequest();
-			document.getElementById("estado").innerHTML = "Inicializado xhr";
+			document.getElementById("progreso").innerHTML = "Inicializado xhr";
 
 			xhr.onreadystatechange = function() {
 				document.getElementById("estado").innerHTML = xhr.readyState;
@@ -24,12 +24,12 @@
 				}
 			};
 			
-			document.getElementById("estado").innerHTML = "Definida la función";
+			document.getElementById("progreso").innerHTML = "Definida la función";
 			
 			xhr.open("GET", "https://www.casadellibro.com/libro-harry-potter-y-la-piedra-filosofal/9788498382662/1702767");
-			document.getElementById("estado").innerHTML = "Abierto";
+			document.getElementById("progreso").innerHTML = "Abierto";
 			xhr.send();
-			document.getElementById("estado").innerHTML = "Enviado";
+			document.getElementById("progreso").innerHTML = "Enviado";
 		</script>
 	</body>
 </html>
