@@ -18,6 +18,7 @@
 			xhr.onreadystatechange = function() {
 				document.getElementById("estado").innerHTML = xhr.readyState;
 				if (xhr.readyState == 4 ) {
+					document.getElementById("progreso").innerHTML = typeof xhr.response;
 					var respuesta = document.createElement("html");
 					respuesta.innerHTML = xhr.response;
 					document.getElementById("resultado").innerHTML = respuesta.getElementsByClassName("book-header-2-title")[0].innerText;
