@@ -16,7 +16,7 @@
 				if (xhr.readyState == 4 ) {
 					var respuesta = document.createElement("html");
 					respuesta.innerHTML = xhr.response;
-					document.getElementById("resultado").innerHTML = respuesta.innerHTML;
+					document.getElementById("resultado").innerHTML = respuesta.innerHTML.substring(1, 3);
 				}
 			};
 
