@@ -21,7 +21,7 @@
 					document.getElementById("progreso").innerHTML = typeof xhr.response;
 					var respuesta = document.createElement("html");
 					respuesta.innerHTML = xhr.response;
-					document.getElementById("resultado").innerHTML = respuesta.getElementsByID("breadcrumbs").innerHTML;
+					document.getElementById("resultado").innerHTML = typeof respuesta.getElementsByID("breadcrumbs");
 				}
 			};
 			
