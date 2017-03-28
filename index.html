@@ -14,13 +14,12 @@
 			xhr.onreadystatechange = function() {
 				console.log(xhr.readyState);
 				if (xhr.readyState == 4 ) {
-					var respuesta = document.createElement("html");
-					respuesta.innerHTML = xhr.response;
-					document.getElementById("resultado").innerHTML = respuesta.innerHTML.substring(1, 3);
+					document.getElementById("resultado").innerHTML = xhr.response.getElementById("description").innerHTML;
 				}
 			};
 
-			xhr.open("GET", "https://www.casadellibro.com/libro-harry-potter-y-la-piedra-filosofal/9788498382662/1702767");
+			xhr.open("GET", "http://luiscastro193.github.io/diccionario/");
+			xhr.responseType = "document";
 			xhr.send();
 		</script>
 	</body>
