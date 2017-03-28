@@ -14,11 +14,11 @@
 			xhr.onreadystatechange = function() {
 				console.log(xhr.readyState);
 				if (xhr.readyState == 4 ) {
-					document.getElementById("resultado").innerHTML = xhr.response.getElementById("description").innerHTML;
+					document.getElementById("resultado").innerHTML = xhr.response.getElementsByClassName("book-header-2-title")[0].innerText;
 				}
 			};
 
-			xhr.open("GET", "https://luiscastro193.github.io/diccionario/");
+			xhr.open("GET", "https://www.casadellibro.com/libro-harry-potter-y-la-piedra-filosofal/9788498382662/1702767");
 			xhr.responseType = "document";
 			xhr.send();
 		</script>
