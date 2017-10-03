@@ -22,7 +22,7 @@
 			}
 			
 			getPage("https://luiscastro193.github.io/diccionario/").then(page => {
-				document.getElementById("resultado").innerHTML = xhr.response.querySelector("p").textContent.trim();
+				document.getElementById("resultado").innerHTML = page.querySelector("p").textContent.trim();
 			});
 		</script>
 	</body>
