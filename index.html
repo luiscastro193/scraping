@@ -22,7 +22,7 @@
 		}
 		
 		getPage("https://luiscastro193.github.io/shuffler/").then(page => {
-			document.getElementById("result").innerHTML = page.querySelector("p").innerText;
+			document.getElementById("result").textContent = page.querySelector("p").innerText;
 		});
 	</script>
 </body>
