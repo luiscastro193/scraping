@@ -11,14 +11,14 @@
 	<p id="result"></p>
 	<script>
 		"use strict";
-		function request(resource, options) {
-			return fetch(resource, options).then(response => {if (response.ok) return response; else throw response});
+		async function request(resource, options) {
+			let response = await fetch(resource, options);
+			if (response.ok) return response; else throw response;
 		}
 		
-		function getPage(url) {
-			return request(url)
-				.then(response => response.text())
-				.then(html => new DOMParser().parseFromString(html, "text/html"));
+		async function getPage(url) {
+			let html = await request(url).then(response => response.text());
+			return new DOMParser().parseFromString(html, "text/html");
 		}
 		
 		getPage("https://luiscastro193.github.io/shuffler/").then(page => {
